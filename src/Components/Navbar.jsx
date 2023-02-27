@@ -3,6 +3,7 @@ import { QuestionOutlineIcon } from '@chakra-ui/icons';
 import "./Navbar.css";
 import Simple from './Nav2';
 import WithSubnavigation from './Nav';
+import {Link} from "react-router-dom"
 
 
 
@@ -26,14 +27,16 @@ function Navbar(){
             </Box>
             <Spacer />
             <Box gap="20px" style={{display:"flex"}} >
-                <p className="navbar">Stores</p>
-                <p className="navbar">Bulk Orders</p>
-                <p className="navbar">Gift Cards</p>
-                <p className="navbar">UL Services</p>
+                <Link to="sofa"><p className="navbar">Stores</p></Link>
+                <Link to="dealzone"><p className="navbar">Bulk Orders</p></Link>
+                <Link to="trending"><p className="navbar">Gift Cards</p></Link>
+                <Link to="interior"><p className="navbar">UL Services</p></Link>             
+                
+                
             </Box>
         </Flex>
         <WithSubnavigation/>
-        {/* <Simple/> */}
+        <Simple/>
         
         
         
